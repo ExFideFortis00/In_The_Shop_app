@@ -47,6 +47,7 @@ group :development, :test do
   gem 'guard-bundler', require: false
   gem 'terminal-notifier-guard'
   gem 'shoulda-matchers'
+  gem 'annotate', '~> 2.6.3'
 end
 
 # bundle install
