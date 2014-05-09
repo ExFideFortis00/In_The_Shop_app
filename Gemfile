@@ -38,3 +38,25 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-bundler', require: false
+  gem 'terminal-notifier-guard'
+  gem 'shoulda-matchers'
+end
+
+# bundle install
+# rails g rspec:init
+# rails g rspec:install
+# bundle exec guard init spec
+# In the guard file: guard :rspec, cmd: 'bundle exec rspec’ do
+# bundle exec guard
+# create spec file e.g. spec/models/user_spec.rb
+# run migration: rake db:migrate RAILS_ENV=test
+
+
+
