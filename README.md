@@ -19,11 +19,16 @@ Lastly the application connects you to your favorite rental car sites so that yo
 
 
 #### Execution ####
-ERD:
-
-Pivotal Tracker: https://www.pivotaltracker.com/s/projects/1077188
+###### **_ERD:_**
 
 
-Heroku Launch:
+###### **_Pivotal Tracker:_** 
+https://www.pivotaltracker.com/s/projects/1077188
 
-APIs Being Implemented:
+###### **_Heroku Launch:_**
+
+
+###### **_APIs Being Implemented:_**
++ Carvoyant API - http://confluence.carvoyant.com/display/PUBDEV/DataKey
++ Google Maps API - 
++ Yelp API -
