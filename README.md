@@ -1,11 +1,11 @@
 # In The Shop (ITS)
 
 #### Introduction ####
-##### **_Intro/Problem Being Solved:_** 
+###### **_Intro/Problem Being Solved:_** 
 
 "In the Shop” is an application to help consumers take back control over maintaining one of the most important tools in their lives, their car. The app uses a Bluetooth enabled ODB-II device to wirelessly stream data about your car, in real time, to your smartphone or computer. The app helps you locate a shop or mechanic that has a strong track record reparing issues similar to those facing your vehicle. Lastly, the application provides you with options for car share or rental car locations, so you can stay mobile even while your car is "In The Shop".
 
-##### **_Solution:_** 
+###### **_Solution:_** 
 
 "In the Shop” is an application to help consumers take back control over maintaining one of the most important tools in their lives, their car. Up there with used car salesmen, the car repair industry has a comically terrible public image that is only compounded by the fact that its entire business model is overtly benefitted by keeping a consumer uninformed.
 
@@ -15,7 +15,7 @@ In addition to defining these codes for you, the app also searches the web for m
 
 Lastly the application connects you to your favorite rental car sites so that you can still stay mobile, even when your car is not. 
 
-##### **_Proof of Concept/Reserch Resources:_**
+###### **_Proof of Concept/Reserch Resources:_**
 
 
 #### Execution ####
