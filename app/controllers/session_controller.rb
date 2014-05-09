@@ -10,7 +10,7 @@ class SessionController < ApplicationController
       #3)Set the user.id = to the session id
       session[:user_id] = user.id
       #4) redirect to root_path
-      redirect_to root_path #TODO: This should redirect to the user's show page
+      redirect_to user_path(session[:user_id])
     else
       #5)Else, rerender the page
       render :new
