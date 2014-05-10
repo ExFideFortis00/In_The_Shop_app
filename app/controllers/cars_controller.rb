@@ -4,11 +4,14 @@ class CarsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @car = Car.new
   end
 
   def create
+    @user = User.find(params["car"]["user_id"].to_i)
     @car = Car.new(car_params)
+    @user.cars << @car
     if @car.save
       redirect_to user_path(current_user)
     else
@@ -40,6 +43,7 @@ class CarsController < ApplicationController
 
   def car_params
     params.require(:car).permit(
+      :user_id,
       :name,
       :make,
       :model,
