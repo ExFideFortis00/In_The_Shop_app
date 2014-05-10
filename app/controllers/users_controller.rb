@@ -17,13 +17,29 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = current_user
+    @cars = current_user.cars
+  end
+
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    if @user.save
+      redirect_to user_path(@user)
+    else
+      render :new
+    end
   end
 
-  def delete
+  def destroy
+    user = User.find(params[:id])
+    user.destroy
+    redirect_to root_path
   end
 
   private

@@ -1,1 +1,9 @@
 <h1>All of This User's Cars</h1>
+
+<ul>
+  <li>
+    <% @cars.each do |car|%>
+      <%= car.make %>
+    <% end %>
+  </li>
+</ul>

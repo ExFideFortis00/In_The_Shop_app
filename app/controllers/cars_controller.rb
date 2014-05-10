@@ -8,15 +8,32 @@ class CarsController < ApplicationController
   end
 
   def create
+    @car = Car.new(car_params)
+    if @car.save
+      redirect_to user_path(current_user)
+    else
+      render :new
+    end
   end
 
   def edit
+    @car = Car.find(params[:id])
   end
 
   def update
+    @car = Car.find(params[:id])
+    @car.update
+    if @car.save
+      redirect_to user_path(current_user)
+    else
+      render :new
+    end
   end
 
   def delete
+    car = Car.find(params[:id])
+    car.destroy
+    redirect_to user_path(current_user)
   end
 
   private

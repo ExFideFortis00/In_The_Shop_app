@@ -1,0 +1,16 @@
+<!-- car fields -->
+<%= form_for(@car) do |f| %>
+  <%= f.label(:name) %>  
+  <%= f.text_field(:name) %>  
+  <%= f.label(:make) %>  
+  <%= f.text_field(:make) %>  
+  <%= f.label(:model) %>  
+  <%= f.text_field(:model) %> 
+  <%= f.label(:year) %>  
+  <%= f.number_field(:year) %>  
+  <%= f.label(:starting_milage) %>  
+  <%= f.number_field(:starting_milage) %>  
+  <%= f.label(:image_url) %>  
+  <%= f.text_field(:image_url) %>
+  <%= f.submit %>
+<% end %>
