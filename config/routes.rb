@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :users
   resources :cars do 
     resources :alerts
-    resources :dashboard only:[:index]
+    resources :dashboard, only: [:index]
   end
 
   # Example of regular route:
