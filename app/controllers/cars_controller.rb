@@ -25,7 +25,7 @@ class CarsController < ApplicationController
 
   def update
     @car = Car.find(params[:id])
-    @car.update
+    @car.update(car_params)
     if @car.save
       redirect_to user_path(current_user)
     else
@@ -33,7 +33,7 @@ class CarsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     car = Car.find(params[:id])
     car.destroy
     redirect_to user_path(current_user)
