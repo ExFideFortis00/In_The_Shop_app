@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -58,6 +59,10 @@ end
 # bundle exec guard
 # create spec file e.g. spec/models/user_spec.rb
 # run migration: rake db:migrate RAILS_ENV=test
+group :development, :test, :production do
+  gem 'rails_12factor'
+  gem 'httparty'
+end
 
 
 
