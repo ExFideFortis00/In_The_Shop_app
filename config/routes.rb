@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'session/new' => 'session#new'
   post "/session"      => "session#create"
   get  "/logout"       => "session#destroy"
+  get '/callback', to: 'dashboard#index'
   
   resources :users
   resources :cars do 
