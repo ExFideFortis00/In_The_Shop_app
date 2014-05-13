@@ -9,12 +9,12 @@
       #map-canvas { height: 100% }
     </style>
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=GOOGLEMAPS_SECRET&sensor=true">
+      src="https://maps.googleapis.com/maps/api/js?key=#{GOOGLEMAPS_API_KEY}&sensor=false">
     </script>
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
+          center: new google.maps.LatLng(40.7399660, -73.9901310),
           zoom: 8
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
@@ -26,6 +26,7 @@
   <body>
     <div id="map-canvas"/>
   </body>
+</html>
 
 <p><%= current_user %></p>
 <ul>
