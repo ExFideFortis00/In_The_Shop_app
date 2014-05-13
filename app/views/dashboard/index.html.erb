@@ -9,17 +9,66 @@
       #map-canvas { height: 100% }
     </style>
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=#{GOOGLEMAPS_API_KEY}&sensor=false">
+      src="https://maps.googleapis.com/maps/api/js?key=#{GOOGLEMAPS_API_KEY}&libraries=places&sensor=false">
     </script>
     <script type="text/javascript">
       function initialize() {
+        var myLatlng = new google.maps.LatLng(40.7399660, -73.9901310);
         var mapOptions = {
-          center: new google.maps.LatLng(40.7399660, -73.9901310),
-          zoom: 8
+          center: myLatlng, 
+          zoom: 15
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            title: 'Hello World!'
+          });
+
       }
+      
+      function search_repair_shops() {
+// TODO: Add this as an on_click event when you clik on the error code
+// This is a second call because this will occur when a suer lciks on the error code
+        var myLatlng = new google.maps.LatLng(40.7399660, -73.9901310);//TODO: Need to make this interactive   
+        var mapOptions = {
+          center: myLatlng, 
+          zoom: 15
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            title: 'Hello World!'
+          });
+
+        var request = {
+            location: myLatlng,
+            radius: '500',
+            query: 'car_repair',
+            openNow: true
+          };
+
+    //   service = new google.maps.places.PlacesService(map);
+    //   service.textSearch(request, callback);
+  }
+
+//     function callback(results, status) {
+//       if (status == google.maps.places.PlacesServiceStatus.OK) {
+//         for (var i = 0; i < results.length; i++) {
+//           var place = results[i];
+//           createMarker(results[i]);
+//     }
+//   }
+// }
+      }
+
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
