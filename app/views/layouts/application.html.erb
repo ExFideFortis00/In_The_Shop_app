@@ -2,7 +2,15 @@
 <html>
 <head>
   <title>InTheShopApp</title>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Enter description info here">
+    <meta name="author" content="Enter author info here">
+
+    <!-- Google Maps Specific Meta ============================================= -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+    <!-- Mobile Specific Meta ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&sensor=false">
@@ -11,9 +19,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
- <p id="log_out"><%= link_to "Sign out", logout_path, id: "log_out" %></p>
-
-
+  <div class="containter">
+    <div class="eight columns header">
+      <h1>In the Shop</h1>
+    </div>
+    <div id="nav" class="eight columns">
+      <ul>
+        <li><a href="/">Home</a></li></li>
+        <li><a href="/users/new">Sign-up</a></li></li>
+        <li><a href="/session/new">Login</a></li></li>
+        <li id="log_out"><%= link_to "Log out", logout_path, id: "log_out" %></li>
+      </ul>
+    </div>
+  </div>
 <%= yield %>
 
 </body>
