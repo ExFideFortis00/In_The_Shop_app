@@ -266,6 +266,13 @@
   .half-bottom { margin-bottom: 10px !important; }
   .add-bottom { margin-bottom: 20px !important; }
 
+.container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 #headerImage img{
     margin-bottom: 50px;
     max-width: 100%;
@@ -278,6 +285,11 @@
 }
 #nav {
   display: inline-block;
+}
+
+#car_profile {
+  display: inline-block;
+  background-color: red;
 }
 
 
