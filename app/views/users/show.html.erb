@@ -15,7 +15,7 @@
         <% @cars.each do |car|%>
       <li>
           <p><%= car.name %> || <%= car.make %>, <%= car.model %></p>
-          <a href="<%= car_path(car) %>">
+          <a href="<%= car_dashboard_index_path(car) %>">
             <img src="<%= car.image_url %>">
           </a>
           <p><%= link_to "Edit Car", edit_car_path(car) %> || <%= link_to "Delete Car", car_path(car), :method => "delete" %></p>
