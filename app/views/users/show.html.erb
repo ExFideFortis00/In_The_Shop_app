@@ -22,5 +22,8 @@
         <% end %>
       </li>
     </ul>
+    <% @connected_vehicles.map do |vehicle| %>
+      <%= vehicle["name"] %>
+    <% end %>
   </div>
 
