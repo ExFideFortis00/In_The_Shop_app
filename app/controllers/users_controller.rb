@@ -20,6 +20,10 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @cars = current_user.cars
+
+    if !logged_in?
+      redirect_to root_path(@user)
+    end
   end
 
   def edit

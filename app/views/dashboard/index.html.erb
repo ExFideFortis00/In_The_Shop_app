@@ -1,4 +1,5 @@
 
+
 <div class="map seven columns" id="map-canvas">
 </div>
 
@@ -9,6 +10,7 @@
   
   <div class="car_profile_info four columns" id="car_profile_info">
     <h3><%= @car.name %></h3>
+    <button id="update_errors">Diagnostic</button>
     <p><%= @car.make %> <%= @car.model %> <%= @car.year  %></p>
     <p><%= @car.starting_milage %></p>
   </div>
@@ -19,10 +21,7 @@
 <!--   TODO: Make these both dynamic tables -->
   <div class="current_error_codes four columns" id="current_error_codes">
     <h5>Current Error Codes</h5>
-    <ol>
-      <li>Error Code 1</li>
-      <li>Error Code 2</li>
-      <li>Error Code 3</li>
+    <ol id="error_codes_list">
     </ol>
   </div>
 <div class="past_error_codes four columns" id="past_error_codes">

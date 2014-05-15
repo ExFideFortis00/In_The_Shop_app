@@ -13,5 +13,6 @@
   <%= f.label(:image_url) %>  
   <%= f.text_field(:image_url) %>
   <%= f.hidden_field(:user_id, :value => @user.id) %>
+  <%= f.hidden_field(:id) %>
   <%= f.submit %>
 <% end %>

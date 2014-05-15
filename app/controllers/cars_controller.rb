@@ -52,7 +52,8 @@ class CarsController < ApplicationController
       :model,
       :year,
       :starting_milage,
-      :image_url
+      :image_url,
+      :id
       )
   end
 
