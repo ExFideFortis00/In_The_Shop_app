@@ -1,9 +1,27 @@
 var map;
 var infoWindow;
+var num_Lat
+var num_Long
 
 function initialize() {
-  var myLatLng = new google.maps.LatLng(40.6480350, -73.9467150);
+  var car_id = $(".temp_information").data()["car"]["id"]
+    $.ajax({
+    type: 'GET',
+    url: "https://api.carvoyant.com/v1/api/vehicle/" + car_id + "/data/?key=GEN_WAYPOINT&mostRecentOnly=1&sortOrder=desc&searchLimit=1",
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader('Authorization', 'Bearer jqrqp8hkmwy4wxpdwjjrq5mn');
+    },
+    dataType: 'json',
+  }).done(function(data){
+    console.log(data)
+    var latLong = data["data"][0]["value"];
+    var array = latLong.split(",");
+    var rawLat = array[0];
+    var rawLong = array[1];
+    num_Lat = Number(array[0]);
+    num_Long = Number(array[1]);
 
+  var myLatLng = new google.maps.LatLng(num_Lat, num_Long);
   map = new google.maps.Map(document.getElementById("map-canvas"), { 
     center: myLatLng,
     zoom: 8,
@@ -30,6 +48,7 @@ function initialize() {
 
   google.maps.event.addListener(myMarker, 'click', function() {
   infowindow.open(map, this);
+  });
   });
 }
 
