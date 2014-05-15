@@ -1,16 +1,40 @@
-<h1>Dashboard!</h1>
 
-<div id="map-canvas"/>
+<div class="map seven columns" id="map-canvas">
+</div>
 
-<div id="car_profile"/>
+<div class="car_profile seven columns" id="car_profile">
+  <div class="car_image three columns" id="car_image">
+    <img src="<%= @car.image_url %>">
+  </div>
+  
+  <div class="car_profile_info four columns" id="car_profile_info">
+    <h3><%= @car.name %></h3>
+    <p><%= @car.make %> <%= @car.model %> <%= @car.year  %></p>
+    <p><%= @car.starting_milage %></p>
+  </div>
 
-<p><%= current_user %></p>
-<ul>
-  <li>
-    <% @cars.each do |car|%>
-      <%= car.make %>
-    <% end %>
-  </li>
+  <div class="user_profile_info four columns" id="user_profile_info">
+    <p><%= @user.first_name %> <%= @user.last_name %></p>    
+  </div>
+<!--   TODO: Make these both dynamic tables -->
+  <div class="current_error_codes four columns" id="current_error_codes">
+    <h5>Current Error Codes</h5>
+    <ol>
+      <li>Error Code 1</li>
+      <li>Error Code 2</li>
+      <li>Error Code 3</li>
+    </ol>
+  </div>
+<div class="past_error_codes four columns" id="past_error_codes">
+  <h5>Past Error Codes</h5>
+    <ol>
+      <li>Past Error Code 1</li>
+      <li>Past Error Code 2</li>
+      <li>Past Error Code 3</li>
+    </ol>
+  </div>
+</div>
+
 </ul>
 
 
