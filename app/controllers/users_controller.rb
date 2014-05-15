@@ -20,9 +20,6 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @cars = current_user.cars
-    response = connected_vehicles = HTTParty.get('https://api.carvoyant.com/v1/api/vehicle/',:headers => { "Authorization" => "Bearer jqrqp8hkmwy4wxpdwjjrq5mn"})
-    @connected_vehicles = response["vehicle"]
-
   end
 
   def edit
