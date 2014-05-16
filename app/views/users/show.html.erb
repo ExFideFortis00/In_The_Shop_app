@@ -1,19 +1,20 @@
-<h1>User's Show Page</h1>
+<h1>HomePage</h1>
+  <h4>Welcome, <%= current_user.first_name%></h4>
 
 <% if logged_in? %>
-  <p><%= current_user.first_name%>'s Page</p>
+<div class="non_dashboard_container">
 
-  <div id="account_settings"><strong>Account Settings</strong>
+  <div id="account_settings" class="seven columns"><strong>Account Settings</strong>
     <p><%= link_to "Edit Account", edit_user_path(@user.id) %></p>
     <p><%= link_to "Delete Account", user_path(@user.id), :method => "delete" %></p>
   </div>
 
-  <div id="add_car"><strong>Add New Vehicle To Account</strong>
+  <div id="add_car" class="seven columns"><strong>Add New Vehicle To Account</strong>
     <p><%= link_to "Track New Car", new_car_path %></p>
   </div>
 
   <div id="active_cars"><strong>Active Vehicles</strong>
-    <ul>
+    <ul id="car_display" class="three columns">
         <% @cars.each do |car|%>
       <li>
           <p><%= car.name %> || <%= car.make %>, <%= car.model %></p>
@@ -28,4 +29,5 @@
     <% redirect_to root_path %>
   <% end %>
   </div>
+</div>
 

@@ -280,15 +280,52 @@
   }
 .title {
   display: inline-block;
-  font-size: 46px;
+  font-size: 50px;
   margin-top: 25px;
 }
 #nav {
-  display: inline-block;
+  border: 2px solid black;
+  font-size: 20px;
+  text-align: center;
+}
+
+#center {
+  text-align: center;
 }
 
 #car_profile {
   display: inline-block;
 }
 
+.forms {
+  background-color: 
+}
 
+.non_dashboard_container {
+  background-color: #DADFE1;
+}
+
+#homepage_banner {
+  background-color:;
+  font-family: 'Radley', serif;
+  text-align: center;
+}
+
+#account_settings {
+}
+
+#add_car {
+  display: inline-block;
+}
+
+#car_display {
+  max-width: 100%;
+  right: 350px;
+}
+
+#active_cars {
+  border-top: 3px solid black;
+}
+#car_display {
+  display: inline-block;
+}

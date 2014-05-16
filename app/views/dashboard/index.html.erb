@@ -11,13 +11,12 @@
   
   <div class="car_profile_info four columns" id="car_profile_info">
     <h3><%= @car.name %></h3>
-    <button id="update_errors">Diagnostic</button>
-    <p><%= @car.make %> <%= @car.model %> <%= @car.year  %></p>
-    <p><%= @car.starting_milage %></p>
+    <button id="update_errors">Run Diagnostic</button>
+    <p><strong>Make:</strong><%= @car.make %> <strong>Model:</strong><%= @car.model %> <strong>Year:</strong><%= @car.year  %></p>
+    <p><strong>Milage:</strong><%= @car.starting_milage %></p>
   </div>
 
-  <div class="user_profile_info four columns" id="user_profile_info">
-    <p><%= @user.first_name %> <%= @user.last_name %></p>    
+  <div class="user_profile_info four columns" id="user_profile_info">    
   </div>
 <!--   TODO: Make these both dynamic tables -->
   <div class="current_error_codes four columns" id="current_error_codes">
